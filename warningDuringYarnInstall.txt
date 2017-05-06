@@ -1,0 +1,22 @@
+warning grunt-bower-task > bower > glob >
+  minimatch@1.0.0: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+
+warning grunt-bower-task > rimraf >
+  graceful-fs@1.1.14: graceful-fs v3.0.0 and before will fail on node releases >= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use 'npm ls graceful-fs' to find it in the tree.
+
+warning grunt-bower-task >
+  wrench@1.4.4: wrench.js is deprecated! You should check out fs-extra (https://github.com/jprichardson/node-fs-extra) for any operations you were using wrench for. Thanks for all the usage over the years.
+
+warning grunt-bower-task > bower > bower-json >
+  graceful-fs@2.0.3: graceful-fs v3.0.0 and before will fail on node releases >= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use 'npm ls graceful-fs' to find it in the tree.
+
+warning grunt-bower-task > bower > insight > 
+  tough-cookie@0.12.1: ReDoS vulnerability parsing Set-Cookie https://nodesecurity.io/advisories/130
+
+warning grunt-bower-task > bower > request > node-uuid@1.4.8: Use uuid module instead
+
+warning grunt-browser-sync > browser-sync > localtunnel > request > node-uuid@1.4.8: Use uuid module instead
+
+warning grunt-ts > chokidar > readdirp > minimatch@0.2.14: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+
+warning grunt-bower-task > bower > update-notifier > latest-version > package-json > registry-url > npmconf@2.1.2: this package has been reintegrated into npm and is now out of date with respect to npm
