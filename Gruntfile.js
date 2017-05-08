@@ -2,6 +2,12 @@ module.exports = function(grunt) {
   require('jit-grunt')(grunt)
 
   grunt.initConfig({
+    watch: {
+      concat: {
+        files: ['src/intro.js', 'src/project.js'],
+        tasks: ['concat']
+      }
+    },
     concat: {
       options: {
         separator: '\r',
