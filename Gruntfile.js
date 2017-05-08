@@ -1,4 +1,6 @@
 module.exports = function(grunt) {
+  require('jit-grunt')(grunt)
+
   grunt.initConfig({
     concat: {
       options: {
@@ -10,8 +12,6 @@ module.exports = function(grunt) {
       },
     }
   });
-  grunt.loadNpmTasks('grunt-contrib-concat');
-
   grunt.registerTask('nyan', ['concat']);
 
   // grunt.registerTask('default', ['jshint']);
