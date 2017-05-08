@@ -1,4 +1,6 @@
 module.exports = function(grunt) {
+  // TBD need to try second parameter for static mapping
+  // TBD need to make an original simple plugin
   require('jit-grunt')(grunt)
 
   grunt.initConfig({
@@ -16,9 +18,23 @@ module.exports = function(grunt) {
         src: ['src/intro.js', 'src/project.js'],
         dest: 'dist/built.js',
       },
+    },
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src : [
+            '*.html'
+          ]
+        },
+        options: {
+          // watchTask: true,
+          server: {
+            baseDir: './app'
+          }
+        }
+      }
     }
   });
-  grunt.registerTask('nyan', ['concat']);
-
-  // grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('Concat', ['concat']);
+  grunt.registerTask('BrowserSync', ['browserSync']);
 };
