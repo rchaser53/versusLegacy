@@ -8,6 +8,10 @@ module.exports = function(grunt) {
       concat: {
         files: ['src/intro.js', 'src/project.js'],
         tasks: ['concat']
+      },
+      less : {
+        files: ['./less/*.less'],
+        tasks: ['less']
       }
     },
     concat: {
@@ -33,8 +37,17 @@ module.exports = function(grunt) {
           }
         }
       }
+    },
+    less : {
+      development: {
+        files: {
+          './dist/allInOne.css': './less/*.less'
+        },
+      }
     }
   });
+
   grunt.registerTask('Concat', ['concat']);
   grunt.registerTask('BrowserSync', ['browserSync']);
+  grunt.registerTask('Less', ['less']);
 };

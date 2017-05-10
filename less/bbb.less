@@ -1,0 +1,11 @@
+@import 'aaa.less';
+
+.testMixin(@argA){
+  width: @argA;
+}
+
+.outputMixin{
+  height: 10px;
+  .testMixin(20px);
+  background-color: @poyo;
+}
