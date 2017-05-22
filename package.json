@@ -3,7 +3,7 @@
   "main": "Gruntfile.js",
   "scripts": {
     "grunt": "grunt",
-    "uglify": "uglifyjs junkSource.js -o min.js --source-map root='http://localhost:3000/',url=min.js.map"
+    "uglify": "uglifyjs *.ts -o min.js --source-map min.js.map"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "less": "^2.7.2",
-    "uglify-js": "^3.0.10"
+    "uglify-js": "2.8.27"
   },
   "devDependencies": {
     "esprima": "3.1.3",
