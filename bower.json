@@ -1,0 +1,17 @@
+{
+  "name": "versus-legacy",
+  "description": "",
+  "main": "Gruntfile.js",
+  "authors": [
+    "rchaser53 <tayoshizawa29@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rchaser53/versusLegacy",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

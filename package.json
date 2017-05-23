@@ -3,6 +3,7 @@
   "main": "Gruntfile.js",
   "scripts": {
     "grunt": "grunt",
+    "bower": "bower",
     "uglify": "uglifyjs *.ts -o min.js --source-map min.js.map"
   },
   "repository": {
