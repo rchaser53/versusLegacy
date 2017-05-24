@@ -44,9 +44,23 @@ module.exports = function(grunt) {
           './dist/allInOne.css': './less/*.less'
         },
       }
+    },
+    usemin: {
+      options: {
+        dirs: ['src']
+      },
+      html: ['src/**/*.html']
+    },
+    useminPrepare: {
+      options: {
+        root: 'src/..',
+        dest: 'dist'
+      },
+      html: ['dist/**/*.html']
     }
   });
 
+  grunt.registerTask('Min', ['useminPrepare', 'usemin']);
   grunt.registerTask('Concat', ['concat']);
   grunt.registerTask('BrowserSync', ['browserSync']);
   grunt.registerTask('Less', ['less']);
