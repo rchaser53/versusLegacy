@@ -4,6 +4,8 @@
   "scripts": {
     "grunt": "grunt",
     "bower": "bower",
+    "jshint": "jshint",
+    "jslint": "jslint",
     "uglify": "uglifyjs *.ts -o min.js --source-map min.js.map"
   },
   "repository": {
