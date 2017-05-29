@@ -9,3 +9,25 @@
   .testMixin(20px);
   background-color: @poyo;
 }
+
+p,div {
+  font-size:15px;
+  border:solid 1px aqua;
+  background-color:yellow;
+
+  &.row1 {
+    line-height:normal;
+  }
+  &.row2 {
+    line-height:1.5;
+  }
+  &.row3 {
+    line-height:15px;
+  }
+  &.row4 {
+    line-height:200%;
+  }
+  &.row5 {
+    line-height:2em;
+  }
+}
