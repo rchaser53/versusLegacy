@@ -3,9 +3,9 @@
   <head>
     <script>
       sessionStorage.setItem('2', 2)
-      console.log(sessionStorage.getItem('1'),
-                  sessionStorage.getItem('2'),
-                  'html2')
+      // index1.htmlから1度でも遷移すると値がnullでなくなる
+      console.log(1, sessionStorage.getItem('1'), 'html2')
+      console.log(2, sessionStorage.getItem('2'), 'html2')
     </script>
   </head>
   <body>

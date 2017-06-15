@@ -2,6 +2,7 @@
   "name": "versus-legacy",
   "main": "Gruntfile.js",
   "scripts": {
+    "start": "node server",
     "grunt": "grunt",
     "bower": "bower",
     "jshint": "jshint",

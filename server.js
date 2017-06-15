@@ -5,7 +5,7 @@ var app = express()
 app.use(express.static('./'))
 
 app.get('/', function(req, res){
-  res.sendFile('index.html')
+  res.send('need to input url "localhost:3000/1 or localhost:3000/2"')
 })
 
 app.get('/1', function(req, res){
