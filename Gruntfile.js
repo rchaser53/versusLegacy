@@ -64,7 +64,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadTasks('./nyan');
+  grunt.loadTasks('./grunt');
   grunt.registerTask('Min', ['useminPrepare', 'usemin']);
   grunt.registerTask('Concat', ['concat']);
   grunt.registerTask('BrowserSync', ['browserSync']);
