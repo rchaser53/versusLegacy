@@ -12,6 +12,10 @@ module.exports = function(grunt) {
       less : {
         files: ['./less/*.less'],
         tasks: ['less']
+      },
+      webpack: {
+        files: ['forWebpack/**/*'],
+        tasks: ['webpack']
       }
     },
     concat: {
@@ -60,6 +64,7 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadTasks('./nyan');
   grunt.registerTask('Min', ['useminPrepare', 'usemin']);
   grunt.registerTask('Concat', ['concat']);
   grunt.registerTask('BrowserSync', ['browserSync']);
