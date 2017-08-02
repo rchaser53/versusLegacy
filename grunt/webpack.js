@@ -1,33 +1,24 @@
 const webpack = require('webpack')
 const options = require('../webpack.config.js')
+const { spawn } = require('child_process');
 
 module.exports = function (grunt) {
-  grunt.registerTask('webpack', 'call in js', function () {
-    let done = this.async();
-    let lastHash = null;
-    let compiler = webpack(options);
+  grunt.registerTask('webpack', function () {
+    var done = this.async();
 
-    function compilerCallback(err, stats) {
-      if(!options.watch || err) {
-        // Do not keep cache anymore
-        compiler.purgeInputFileSystem();
-      }
+    const ls = spawn('webpack', [], { stdio: ['ipc', null, null, null, 'pipe'] });
+    ls.stdout.on('data', (data) => {
+      console.log(`stdout: ${data}`);
+    });
 
-      if(err) {
-        lastHash = null;
-        console.error(err.stack || err);
-        if(err.details) console.error(err.details);
-        process.exit(1);
-      }
+    ls.stderr.on('data', (data) => {
+      console.log(`stderr: ${data}`);
+      done()
+    });
 
-      if(!options.watch && stats.hasErrors()) {
-        process.on("exit", function() {
-          process.exit(2);
-        });
-      }
-    }
-
-    compiler.run(compilerCallback);
+    ls.on('close', (code) => {
+      done()
+    });
   });
 };
 
