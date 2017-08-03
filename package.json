@@ -7,7 +7,8 @@
     "bower": "bower",
     "jshint": "jshint",
     "jslint": "jslint",
-    "uglify": "uglifyjs *.ts -o min.js --source-map min.js.map"
+    "uglify": "uglifyjs *.ts -o min.js --source-map min.js.map",
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
