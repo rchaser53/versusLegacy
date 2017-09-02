@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = function(grunt) {
   // TBD need to try second parameter for static mapping
   // TBD need to make an original simple plugin
@@ -44,6 +46,11 @@ module.exports = function(grunt) {
     },
     less : {
       development: {
+        options: {
+          sourceMap: true,
+          sourceMapRootpath: __dirname,
+          sourceMapFileInline: true
+        },
         files: {
           './dist/allInOne.css': './less/*.less'
         },
